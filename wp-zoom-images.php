@@ -4,7 +4,7 @@
  * Plugin Name: WP Zoom Images
  * Plugin URI: https://github.com/devappsteam/wp-zoom-images
  * Description: A lightweight (1.8kb minified) and easy jQuery image zoom plugin that enables the visitor to zoom in/out images with mouse and touch events.
- * Version: 1.0
+ * Version: 1.0.2
  * Author: DevApps
  * Author URI: http://devapps.com.br/
  */
@@ -44,7 +44,7 @@ class WP_Zoom_Images
         wp_enqueue_style('zoom', plugins_url('/assets/vendor/image-zoom-plugin/dist/css/image-zoom.css', __FILE__));
         wp_enqueue_script('zoom', plugins_url('/assets/vendor/image-zoom-plugin/dist/js/image-zoom.min.js', __FILE__), array('jquery'), WZI_VERSION, true);
         wp_enqueue_style(WZI_TEXT_DOMAIN, plugins_url('/assets/css/style.css', __FILE__));
-        wp_enqueue_script(WZI_TEXT_DOMAIN, plugins_url('/assets/js/main.js', __FILE__), array('jquery'), WZI_VERSION, true);
+        wp_enqueue_script(WZI_TEXT_DOMAIN, plugins_url('/assets/js/main.js', __FILE__), array('jquery','zoom'), WZI_VERSION . '.' . time(), true);
     }
 }
 
