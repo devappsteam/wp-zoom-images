@@ -1,7 +1,7 @@
 (function ($) {
     'use strict';
 
-    var zoomImages = $('.zoom-images img');
+    var zoomImages = $('.zoom img');
     zoomImages.each(function () {
         $(this).imageZoom({ zoom: 300 });
     });
