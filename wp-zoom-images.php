@@ -1,11 +1,11 @@
 <?php
 
 /**
- * Plugin Name: WP Zoom Images
+ * Plugin Name: WP Zoom Images - Grafam
  * Plugin URI: https://github.com/devappsteam/wp-zoom-images
- * Description: A lightweight (1.8kb minified) and easy jQuery image zoom plugin that enables the visitor to zoom in/out images with mouse and touch events.
- * Version: 1.0.2
- * Author: DevApps
+ * Description: Plugin responsável por habilitar o zoom no carrosel de produtos da Grafam.
+ * Version: 1.0.5
+ * Author: DevApps Consultoria e Desenvolvimento de Software
  * Author URI: http://devapps.com.br/
  */
 
@@ -41,10 +41,8 @@ class WP_Zoom_Images
      */
     public function enqueue_script()
     {
-        wp_enqueue_style('zoom', plugins_url('/assets/vendor/image-zoom-plugin/dist/css/image-zoom.css', __FILE__));
-        wp_enqueue_script('zoom', plugins_url('/assets/vendor/image-zoom-plugin/dist/js/image-zoom.min.js', __FILE__), array('jquery'), WZI_VERSION, true);
-        wp_enqueue_style(WZI_TEXT_DOMAIN, plugins_url('/assets/css/style.css', __FILE__));
-        wp_enqueue_script(WZI_TEXT_DOMAIN, plugins_url('/assets/js/main.js', __FILE__), array('jquery','zoom'), WZI_VERSION . '.' . time(), true);
+        wp_enqueue_style(WZI_TEXT_DOMAIN, plugins_url('/assets/css/style.css', __FILE__), array(), WZI_VERSION . '.' . time(), 'all');
+        wp_enqueue_script(WZI_TEXT_DOMAIN, plugins_url('/assets/js/main.js', __FILE__), array('jquery'), WZI_VERSION . '.' . time(), true);
     }
 }
 

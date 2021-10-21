@@ -1,0 +1,21 @@
+.pp-image-slider-thumb-item.active .pp-image-slider-thumb-overlay{
+	background-size: 250% !important;
+	cursor: crosshair !important;
+}
+
+.btn-zoom {
+    position: absolute;
+    z-index: 9999;
+    top: 10px;   
+	right: 10px;
+    line-height: 1;
+    padding: 0;
+    border: none;
+    color: #FFF;
+}
+
+.btn-zoom:hover{
+	border: none;
+    color: #FFF;
+	background: transparent;
+}
