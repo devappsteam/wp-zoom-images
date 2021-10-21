@@ -11,7 +11,7 @@
 
 defined('ABSPATH') || exit;
 
-define('WZI_VERSION', '1.0.0');
+define('WZI_VERSION', '1.0.5');
 define('WZI_TEXT_DOMAIN', 'wp-zoom-images');
 
 class WP_Zoom_Images
@@ -41,8 +41,8 @@ class WP_Zoom_Images
      */
     public function enqueue_script()
     {
-        wp_enqueue_style(WZI_TEXT_DOMAIN, plugins_url('/assets/css/style.css', __FILE__), array(), WZI_VERSION . '.' . time(), 'all');
-        wp_enqueue_script(WZI_TEXT_DOMAIN, plugins_url('/assets/js/main.js', __FILE__), array('jquery'), WZI_VERSION . '.' . time(), true);
+        wp_enqueue_style(WZI_TEXT_DOMAIN, plugins_url('/assets/css/style.css', __FILE__), array(), WZI_VERSION, 'all');
+        wp_enqueue_script(WZI_TEXT_DOMAIN, plugins_url('/assets/js/main.js', __FILE__), array('jquery'), WZI_VERSION, true);
     }
 }
 
